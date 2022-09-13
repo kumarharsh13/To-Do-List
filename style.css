@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Caveat', cursive;
+}
+
+body {
+    background: url('bg.jpg');
+}
+
+h1 {
+    text-align: center;
+    margin-top: 6%;
+    margin-bottom: 2%;
+    font-weight: bolder;
+    font-size: 52px;
+}
+
+#input-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+input {
+    margin: 0;
+    border: none;
+    width: 25%;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 20px 0px 0px 20px;
+    text-align: center;
+    box-shadow: 4px 4px 2px rgb(160, 145, 145);
+}
+
+.addButton {
+    padding: 10px;
+    background-color: aqua;
+    border: none;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: 4px 4px 2px rgb(160, 145, 145);
+    color: black;
+    width: 10%;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    cursor: pointer;
+}
+
+.addButton:hover {
+    background-color: rgb(0, 229, 255);
+}
+
+.addButton:active {
+    box-shadow: 0px 2px 0px rgb(160, 145, 145);
+    transform: translateY(4px);
+}
+
+#display-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    font-size: 25px;
+    font-weight: 500;
+    background-color: aliceblue;
+    color: black;
+    font-size: 20px;
+    width: 40%;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px rgb(160, 145, 145);
+}
+
+ul li {
+    cursor: pointer;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    width: auto;
+    padding: 12px 18px 12px 18px;
+    border-radius: 20px 20px 20px 20px;
+    transition: 0.2s;
+}
+
+ul li:nth-last-child(odd) {
+    background-color: snow;
+}
+
+ul li:hover {
+    background-color:antiquewhite;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    color:rgba(4, 171, 4, 0.904);
+}
+
+ul li.checked::before {
+    content: '';
+    float: left;
+    margin: 1px 14px 1px 14px;
+    border-color: rgba(4, 171, 4, 0.904);
+    border-style: solid;
+    border-width: 0px 4px 4px 0px;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+    transition: 0.5s;
+}
+
+.close {
+    padding: 1px 8px 1px 8px;
+    top: 0;
+    right: 0;
+    color: red;
+    float: right; 
+}
+
+@media screen and  (max-width: 600px) {
+    input, .addButton {
+        font-size: 20px;
+    }
+
+    ul li {
+        font-size: 18px;
+    }
+
+    ul li.checked::before {
+        height: 12px;
+        width: 5px;
+    }
+}
